@@ -12,23 +12,15 @@
   <main>
   <h1>Vanilla JavaScript App</h1>
   <p>Loading content from the API: <b id="name">...</b></p>
-  </main>
 
-  <script>
-  (async function() {
-      const { text } = await( await fetch(`/api/message`)).json();
-      document.querySelector('#name').textContent = text;
-  }());
-  </script>
-  <a href="./hanbrug.jpg"></a>
   <table border="1">
     <tr>
       <th>メニュー</th>
       <th>ハンバーグ 160g</th>
     </tr>
     <tr>
-      <td>イメージ画像</td>
-      <td><a href="./hanbrug.jpg"></a></td>
+      <td>参考写真</td>
+      <td><img src="./hanbrug.jpg" alt="イメージ画像"></td>
     </tr>
     <tr>
       <td>価格</td>
@@ -40,10 +32,18 @@
     </tr>
     <tr>
       <td>カロリー</td>
-      <td>273 cal</td>
+      <td>273K cal</td>
     </tr>
   </table>
-  <a href="hanbrug.jpg"></a>
+  </main>
+
+  <script>
+  (async function() {
+      const { text } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name').textContent = text;
+  }());
+  </script>
+
 </body>
 
 </html>
