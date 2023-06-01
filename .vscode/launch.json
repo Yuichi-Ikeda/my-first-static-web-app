@@ -1,6 +1,18 @@
 {
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "SWA: Run my-first-static-web-app (swa-cli.config.json)",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:4280",
+            "preLaunchTask": "swa: start my-first-static-web-app",
+            "webRoot": "${workspaceFolder}/src",
+            "timeout": 30000
+        },
         {
             "name": "Attach to Node Functions",
             "type": "node",
