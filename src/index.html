@@ -38,7 +38,7 @@
 
   <script>
   (async function() {
-      const { title, picture, price, description, calorie } = await( await fetch(`http://localhost:7071/api/message`)).json();
+      const { title, picture, price, description, calorie } = await( await fetch(`/api/message`)).json();
       document.querySelector('#title').textContent = title;
       document.getElementById("picture").src = picture;
       document.querySelector('#price').textContent = price;
