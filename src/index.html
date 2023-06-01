@@ -11,36 +11,39 @@
 <body>
   <main>
   <h1>Vanilla JavaScript App</h1>
-  <p>Loading content from the API: <b id="name">...</b></p>
 
   <table border="1">
     <tr>
       <th>メニュー</th>
-      <th>ハンバーグ 160g</th>
+      <th><b id="title"></b></th>
     </tr>
     <tr>
       <td>参考写真</td>
-      <td><img src="./hanbrug.jpg" alt="イメージ画像"></td>
+      <td><img id="picture"></b></td>
     </tr>
     <tr>
       <td>価格</td>
-      <td>1,800円</td>
+      <td><b id="price"></b>円</td>
     </tr>
     <tr>
       <td>説明</td>
-      <td>とてもジューシーなハンバーグです。</td>
+      <td><b id="description"></b></td>
     </tr>
     <tr>
       <td>カロリー</td>
-      <td>273K cal</td>
+      <td><b id="calorie"></b>K cal</td>
     </tr>
   </table>
   </main>
 
   <script>
   (async function() {
-      const { text } = await( await fetch(`https://icy-flower-0d0114f00.3.azurestaticapps.net/api/message`)).json();
-      document.querySelector('#name').textContent = text;
+      const { title, picture, price, description, calorie } = await( await fetch(`http://localhost:7071/api/message`)).json();
+      document.querySelector('#title').textContent = title;
+      document.getElementById("picture").src = picture;
+      document.querySelector('#price').textContent = price;
+      document.querySelector('#description').textContent = description;
+      document.querySelector('#calorie').textContent = calorie;
   }());
   </script>
 
