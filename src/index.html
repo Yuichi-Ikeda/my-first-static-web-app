@@ -39,7 +39,7 @@
 
   <script>
   (async function() {
-      const { text } = await( await fetch(`/api/message`)).json();
+      const { text } = await( await fetch(`https://icy-flower-0d0114f00.3.azurestaticapps.net/api/message`)).json();
       document.querySelector('#name').textContent = text;
   }());
   </script>
